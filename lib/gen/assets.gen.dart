@@ -28,6 +28,7 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/5.png
   AssetGenImage get a5 => const AssetGenImage('assets/images/5.png');
+  AssetGenImage get a6 => const AssetGenImage('assets/images/watch.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [a1, a2, a3, a4, a5];

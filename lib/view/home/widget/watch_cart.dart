@@ -45,8 +45,8 @@ class _WatchItemCard extends StatelessWidget {
         MaterialPageRoute(builder: (_) => DetailView(watch: watch)),
       ),
       child: Container(
-        height: 100,
-        width: 220.w,
+        // height: 100,
+        width: 250.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
         ),
@@ -57,7 +57,7 @@ class _WatchItemCard extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: AppColors.kGrey,
+                color: const Color.fromARGB(255, 192, 186, 192),
               ),
               margin: const EdgeInsets.only(top: 150),
               child: Column(

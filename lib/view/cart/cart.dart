@@ -24,8 +24,13 @@ class CartView extends ConsumerWidget {
         backgroundColor: Colors.white,
         title: Text(
           "Your Cart",
-          style: AppTypography.kBold16,
+          style: AppTypography.kBold18,
         ),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(CupertinoIcons.back)),
       ),
       body: isEmpty
           ? const Center(child: Text("Your cart is empty"))

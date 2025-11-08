@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:watch_store/constants/app_theme.dart';
 import 'package:watch_store/view/bottom.dart';
+import 'package:watch_store/view/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               title: 'Watch Store',
               theme: AppTheme.lightTheme,
-              home: MainScreen(),
+              home: SplashScreen(),
             ),
           );
         });

@@ -29,14 +29,14 @@ class DetailView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              20.vSpace,
+              80.vSpace,
               Center(
                 child: Image.asset(
                   watch.watchImage,
-                  height: 270.h,
+                  height: 200.h,
                 ),
               ),
-              50.vSpace,
+              70.vSpace,
               Consumer(
                 builder: (context, ref, child) {
                   final images = ref.watch(
@@ -51,11 +51,11 @@ class DetailView extends StatelessWidget {
                       (index) => Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Container(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 5),
                           decoration: BoxDecoration(
                             border: Border.all(
-                                color: index == 1
+                                color: index == 0
                                     ? const Color.fromARGB(255, 4, 18, 40)
                                     : Colors.transparent),
                             color: Colors.grey[100],
@@ -84,8 +84,9 @@ class DetailView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "USD \$${watch.price}",
-                    style: AppTypography.kBold22,
+                    " ₹${watch.price}",
+                    style: AppTypography.kBold22
+                        .copyWith(color: const Color.fromARGB(255, 19, 3, 3)),
                   ),
                   Consumer(
                     builder: (context, ref, child) {
@@ -93,12 +94,12 @@ class DetailView extends StatelessWidget {
                         onPressed: () {
                           ref.read(cartProvider.notifier).addToCart(watch);
 
-                          // ✅ Show a clean snackbar
+                          // Show a clean snackbar
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
                                 '${watch.watchName} added to cart',
-                                style: AppTypography.kMedium14
+                                style: AppTypography.kExtraBold10
                                     .copyWith(color: Colors.white),
                               ),
                               backgroundColor: Colors.deepPurple[200],

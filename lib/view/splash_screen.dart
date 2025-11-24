@@ -19,7 +19,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
     Future.delayed(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
-        // ignore: use_build_context_synchronously
         context,
         MaterialPageRoute(builder: (context) => const MainScreen()),
       );
@@ -38,10 +37,10 @@ class _SplashScreenState extends State<SplashScreen> {
             Image.asset(
               'assets/images/4.png',
               fit: BoxFit.cover,
-              height: 400,
+              height: 300,
               width: 200,
             ),
-            20.hSpace,
+            5.hSpace,
             const CircularProgressIndicator(color: Colors.black),
           ],
         ),
